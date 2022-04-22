@@ -1,0 +1,41 @@
+CREATE TABLE Employees(
+role varchar2(20),
+name varchar2(20),
+building varchar2(20),
+years_employed int);
+
+INSERT INTO Employees VALUES('Engineer','Becky A.','1e',4);
+
+INSERT INTO Employees VALUES('Engineer','Dan B.','1e',2);
+
+INSERT INTO Employees VALUES('Engineer','Sharon F.','1e',6);
+
+INSERT INTO Employees VALUES('Engineer','Dan M.','1e',4);
+
+INSERT INTO Employees VALUES('Engineer','Malcom S.','1e',1);
+
+INSERT INTO Employees VALUES('Artist','Tylar S.','2w',2);
+
+INSERT INTO Employees VALUES('Artist','Sherman D.','2w',8);
+
+INSERT INTO Employees VALUES('Artist','Jakob J.','2w',6);
+
+INSERT INTO Employees VALUES('Artist','Lillia A.','2w',7);
+
+INSERT INTO Employees VALUES('Artist','Brandon J.','2w',7);
+
+SELECT min(years_employed) from Employees;
+
+Select COUNT(name) from Employees where building='1e';
+
+Select COUNT(name) from Employees where building='2w';
+
+SELECT COUNT(role) from Employees WHERE role='Artist';
+
+SELECT COUNT(DISTINCT role) from Employees;
+
+SELECT SUM(years_employed) from Employees;
+
+SELECT AVG(years_employed) from Employees WHERE role='Engineer';
+
+SELECT AVG(years_employed) from Employees WHERE role='Artist';
